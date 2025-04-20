@@ -10,7 +10,7 @@ Mục tiêu của dự án là xây dựng một hệ thống có khả năng x�
 ## Thiết lập trên Google Colab
 
 1.  **Mở Notebook trong Colab:** Nhấn vào huy hiệu "Open In Colab" ở trên để mở tệp notebook chính trong Google Colab.
-2.  **Chọn Runtime có GPU:** Để tăng tốc độ huấn luyện và phát hiện, hãy đảm bảo bạn đã chọn môi trường thực thi có GPU: Vào menu `Runtime` -> `Change runtime type` -> Chọn `GPU` trong phần "Hardware accelerator".
+2.  **Chọn Runtime có GPU:** Để tăng tốc độ huấn luyện và phát hiện, đảm bảo đã chọn môi trường thực thi có GPU: Vào menu `Runtime` -> `Change runtime type` -> Chọn `GPU` trong phần "Hardware accelerator".
 3.  **Chạy các ô cài đặt đầu tiên trong Notebook:** Các ô mã dưới đây (hoặc tương đương) nên có ở phần đầu notebook của bạn để thiết lập môi trường.
 
     * **Kết nối Google Drive:**
@@ -22,7 +22,7 @@ Mục tiêu của dự án là xây dựng một hệ thống có khả năng x�
     * **Clone Repository từ GitHub:**
         ```python
         # Clone kho chứa này vào môi trường Colab
-        !git clone [https://github.com/Hng-dev-guy/Banknotes-Recognition.git](https://github.com/Hung-dev-guy/Banknotes-Recognition.git)
+        !git clone [https://github.com/Hung-dev-guy/Banknotes-Recognition.git](https://github.com/Hung-dev-guy/Banknotes-Recognition.git)
         %cd Banknotes-Recognition
         ```
 
@@ -36,12 +36,10 @@ Mục tiêu của dự án là xây dựng một hệ thống có khả năng x�
 ## Chuẩn bị Tập dữ liệu (Dataset)
 
 1.  **Tải/Chuẩn bị Dataset:**
-    * Dự án này yêu cầu một tập dữ liệu hình ảnh tiền giấy đã được gán nhãn theo định dạng YOLO.
-    * Bạn cần có sẵn thư mục dataset này (ví dụ: thư mục có tên `Dataset_2` như bạn đã dùng) trên **Google Drive** của bạn.
-    * **Lưu ý:** Do kích thước lớn, tập dữ liệu không được bao gồm trong kho chứa GitHub này.
+    * Dự án này đã có một tập dữ liệu hình ảnh tiền giấy đã được gán nhãn theo định dạng YOLO.
 
 2.  **Cập nhật Tệp Cấu hình Dataset (`data.yaml`):**
-    * Sau khi clone repository ở bước trên, bạn cần **chỉnh sửa tệp cấu hình YAML** (ví dụ: `Dataset_2/data.yaml` hoặc một tệp tương tự nằm trong thư mục `Banknotes-Recognition` vừa clone về Colab) để nó trỏ đúng đến vị trí dataset trên **Google Drive CỦA BẠN**.
+    * Sau khi clone repository ở bước trên, bạn cần **chỉnh sửa tệp cấu hình YAML** 
     * Mở tệp YAML đó trong Colab (dùng trình soạn thảo file bên trái hoặc lệnh `!nano path/to/data.yaml`).
     * Đảm bảo các đường dẫn `train:` và `val:` là **đường dẫn tuyệt đối** trỏ vào thư mục dataset trên Drive của bạn.
     * **Ví dụ nội dung cần sửa trong `data.yaml`:**
@@ -82,7 +80,7 @@ Sau khi cài đặt và cấu hình dataset, bạn có thể chạy các tác v�
 ## Mô hình
 
 * Mô hình được sử dụng trong dự án này dựa trên kiến trúc **YOLOv5**.
-* Trọng số được huấn luyện tốt nhất (`best.pt`) mà tác giả sử dụng có thể tìm thấy tại `/content/drive/MyDrive/Hung/Banknote_Recognition/yolov5/runs/train/exp3/weights/best.pt` (nếu bạn muốn chia sẻ đường dẫn này, nhưng thường người dùng sẽ tự huấn luyện hoặc dùng trọng số họ có). *(Cân nhắc việc cung cấp sẵn trọng số `best.pt` trong repo hoặc trên Drive nếu bạn muốn người khác dễ dàng sử dụng ngay)*
+* Trọng số được huấn luyện tốt nhất (`best.pt`) có thể tìm thấy tại `/Banknote_Recognition/yolov5/runs/train/exp3/weights/best.pt` 
 
 ## Lưu ý cho người dùng Colab
 
