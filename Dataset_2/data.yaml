@@ -1,0 +1,13 @@
+train: /content/drive/MyDrive/Hung/Banknote_Recognition/Dataset_2/train/images
+val: /content/drive/MyDrive/Hung/Banknote_Recognition/Dataset_2/valid/images
+test: /content/drive/MyDrive/Hung/Banknote_Recognition/Dataset_2/test/images
+
+nc: 6
+names: ['10 000 VND', '100 000 VND', '20 000 VND', '200 000 VND', '50 000 VND', '500 000 VND']
+
+roboflow:
+  workspace: money-recognition
+  project: banknotes-recognition
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/money-recognition/banknotes-recognition/dataset/2
